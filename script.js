@@ -1,5 +1,7 @@
 function unfoldMenu(){
     const nav = document.getElementById('primary-nav');
-    nav.classList.toggle("active")
+    const btn = document.getElementById('menu-btn');
+    btn.classList.toggle('active')
+    nav.classList.toggle('active')
 }
     
