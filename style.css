@@ -314,7 +314,8 @@ header .invite-btn {
 	}
 
 	header {
-		padding: 22px 24px;
+		padding: 2rem clamp(2rem, 5vw, 10.875rem);
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -444,15 +445,16 @@ header .invite-btn {
 	}
 
 	.icons-section ul {
-		display: flex;
-		justify-content: space-between;
-		gap: 4rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-auto-rows: 1fr;
+		gap: 2rem;
 	}
 
 	.icons-section li {
 		display: inline-block;
 		text-align: left;
-		max-width: 22%;
+		max-width: 80%;
 	}
 
 	.icons-section li h3 {
@@ -530,7 +532,7 @@ header .invite-btn {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		padding: 2rem 10.375rem;
+		padding: 2rem clamp(2rem, 5vw, 10.875rem);
 		position: relative;
 	}
 
@@ -577,10 +579,13 @@ header .invite-btn {
 	}
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1000px) {
 	.article-section ul {
 		grid-template-columns: 1fr 1fr;
-		gap: 1.875rem;
+	}
+
+	.icons-section ul {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
