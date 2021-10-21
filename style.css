@@ -71,6 +71,15 @@ header nav {
 	transition: all 0.2s ease-in-out;
 }
 
+header nav a {
+	color: var(--dark-blue);
+	text-decoration: none;
+}
+
+header nav a:hover {
+	color: var(--lime-green);
+}
+
 header nav.active {
 	max-height: 100%;
 	transition: all 0.5s ease-in-out;
@@ -143,7 +152,11 @@ header .invite-btn {
 	border: none;
 	border-radius: 25px;
 	background: var(--lime-green);
-	background: linear-gradient(90deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+	background: linear-gradient(
+		90deg,
+		var(--lime-green) 0%,
+		var(--bright-cyan) 100%
+	);
 }
 
 /* ICON SECTION */
@@ -339,7 +352,11 @@ header .invite-btn {
 		border: none;
 		border-radius: 25px;
 		background: var(--lime-green);
-		background: linear-gradient(90deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+		background: linear-gradient(
+			90deg,
+			var(--lime-green) 0%,
+			var(--bright-cyan) 100%
+		);
 		cursor: pointer;
 	}
 
@@ -398,7 +415,11 @@ header .invite-btn {
 		border: none;
 		border-radius: 25px;
 		background: var(--lime-green);
-		background: linear-gradient(90deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+		background: linear-gradient(
+			90deg,
+			var(--lime-green) 0%,
+			var(--bright-cyan) 100%
+		);
 	}
 
 	/* ICON SECTION */
@@ -562,7 +583,7 @@ header .invite-btn {
 
 	header {
 		position: relative;
-		padding: 22px 10.375rem;
+		padding: 0 10.375rem;
 		display: flex;
 		justify-content: space-between;
 		background-color: white;
@@ -582,8 +603,25 @@ header .invite-btn {
 	}
 
 	header nav ul li {
-		display: initial;
-		margin: 0 1rem;
+		display: inline-block;
+		margin: 0;
+		border-bottom: 5px solid white;
+		padding: 3.1875rem 1rem;
+	}
+
+	header nav ul a {
+		padding: 3.1875rem 1rem;
+	}
+
+	header nav ul a:hover {
+		border-bottom: 5px solid;
+		border-image-source: linear-gradient(
+			90deg,
+			var(--lime-green) 0%,
+			var(--bright-cyan) 100%
+		);
+		border-image-slice: 1;
+		border-width: 5px;
 	}
 
 	#menu-btn {
@@ -598,7 +636,11 @@ header .invite-btn {
 		border: none;
 		border-radius: 25px;
 		background: var(--lime-green);
-		background: linear-gradient(90deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+		background: linear-gradient(
+			90deg,
+			var(--lime-green) 0%,
+			var(--bright-cyan) 100%
+		);
 		cursor: pointer;
 	}
 
@@ -667,7 +709,21 @@ header .invite-btn {
 		border: none;
 		border-radius: 25px;
 		background: var(--lime-green);
-		background: linear-gradient(90deg, var(--lime-green) 0%, var(--bright-cyan) 100%);
+		background: linear-gradient(
+			90deg,
+			var(--lime-green) 0%,
+			var(--bright-cyan) 100%
+		);
+		cursor: pointer;
+	}
+
+	.invite-btn:hover {
+		opacity: 0.7;
+	}
+
+	footer .invite-btn:hover {
+		opacity: 1;
+		mix-blend-mode: screen;
 	}
 
 	/* ICON SECTION */
@@ -801,6 +857,17 @@ header .invite-btn {
 		text-align: left;
 	}
 
+	.footer-container ul a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.footer-container ul a:hover {
+		color: var(--lime-green);
+		/* background: var(--lime-green);
+		filter: hue-rotate(80deg); */
+	}
+
 	.footer-container nav ul li:nth-child(-n + 3) {
 		grid-column: 1;
 	}
@@ -816,6 +883,52 @@ header .invite-btn {
 	.media-links li {
 		margin: 1rem 0.5rem;
 		display: inline-block;
+		position: relative;
+	}
+
+	.media-links .hover-color {
+		width: 100%;
+		height: 30px;
+		position: absolute;
+		top: 25%;
+		left: 0;
+	}
+
+	.media-links li a {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-repeat: no-repeat;
+		mask-repeat: no-repeat;
+	}
+
+	.fb {
+		-webkit-mask-image: url(images/icon-facebook.svg);
+		background-image: url(images/icon-facebook.svg);
+	}
+
+	.yt {
+		-webkit-mask-image: url(images/icon-youtube.svg);
+		background-image: url(images/icon-youtube.svg);
+	}
+
+	.tw {
+		background-image: url(images/icon-twitter.svg);
+		-webkit-mask-image: url(images/icon-twitter.svg);
+	}
+
+	.pint {
+		-webkit-mask-image: url(images/icon-pinterest.svg);
+		background-image: url(images/icon-pinterest.svg);
+	}
+
+	.inst {
+		-webkit-mask-image: url(images/icon-instagram.svg);
+		background-image: url(images/icon-instagram.svg);
+	}
+
+	.media-links a:hover {
+		background: var(--lime-green);
 	}
 
 	.footer-extra {
