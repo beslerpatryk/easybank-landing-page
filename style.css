@@ -320,7 +320,7 @@ header .invite-btn {
 		justify-content: space-between;
 		align-items: center;
 		background-color: white;
-		position: fixed;
+		position: static;
 		width: 100%;
 		z-index: 100;
 	}
@@ -374,10 +374,9 @@ header .invite-btn {
 		justify-content: left;
 		align-items: center;
 		width: 100%;
-		height: 40rem;
-		padding: 0 10.375rem;
+		padding: 5rem 10.375rem;
 		background-image: url("images/bg-intro-desktop.svg");
-		background-position: 40rem -16rem;
+		background-position: 50rem -16rem;
 		background-repeat: no-repeat;
 		position: relative;
 	}
@@ -391,6 +390,7 @@ header .invite-btn {
 	}
 
 	.mockup-image {
+		display: none;
 		position: static;
 		z-index: 120;
 		background-image: none;
@@ -404,7 +404,7 @@ header .invite-btn {
 		margin: 0;
 		text-align: left;
 		transform: none;
-		width: 31%;
+		width: 80%;
 	}
 
 	.hero-text h1 {
@@ -412,7 +412,8 @@ header .invite-btn {
 	}
 
 	.hero-text p {
-		margin: 2rem 0;
+		font-size: 1.5rem;
+		margin: 1.5rem 0;
 	}
 
 	.invite-btn {
@@ -440,8 +441,8 @@ header .invite-btn {
 	}
 
 	.icons-section > p {
-		margin: 1rem 0 4rem 0;
-		max-width: 50%;
+		margin: 1rem 0 2rem 0;
+		max-width: 80%;
 	}
 
 	.icons-section ul {
@@ -703,6 +704,7 @@ header .invite-btn {
 	}
 
 	.mockup-image {
+		display: initial;
 		position: static;
 		z-index: 120;
 		background-image: none;
