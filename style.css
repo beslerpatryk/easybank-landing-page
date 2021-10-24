@@ -99,6 +99,26 @@ li {
 	margin: 1rem 0;
 }
 
+header nav ul a:hover {
+	border-bottom: 5px solid;
+	border-image-source: linear-gradient(
+		90deg,
+		var(--lime-green) 0%,
+		var(--bright-cyan) 100%
+	);
+	border-image-slice: 1;
+	border-width: 5px;
+}
+
+.invite-btn:hover {
+	opacity: 0.7;
+}
+
+footer .invite-btn:hover {
+	opacity: 1;
+	mix-blend-mode: screen;
+}
+
 #menu-btn {
 	background-color: transparent;
 	width: 32px;
@@ -250,12 +270,6 @@ header .invite-btn {
 	position: relative;
 }
 
-.media-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 .footer-container img {
 	margin: 1rem 0;
 }
@@ -268,13 +282,66 @@ header .invite-btn {
 	color: var(--very-light-gray);
 }
 
+.media-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .media-links {
 	list-style: none;
 }
 
 .media-links li {
-	margin: 1rem 0.5rem;
+	margin: 0 0.5rem;
 	display: inline-block;
+	position: relative;
+}
+
+.media-links .hover-color {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 25%;
+	left: 0;
+}
+
+.media-links li a {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+.fb {
+	-webkit-mask-image: url(images/icon-facebook.svg);
+	background-image: url(images/icon-facebook.svg);
+}
+
+.yt {
+	-webkit-mask-image: url(images/icon-youtube.svg);
+	background-image: url(images/icon-youtube.svg);
+}
+
+.tw {
+	background-image: url(images/icon-twitter.svg);
+	-webkit-mask-image: url(images/icon-twitter.svg);
+}
+
+.pint {
+	-webkit-mask-image: url(images/icon-pinterest.svg);
+	background-image: url(images/icon-pinterest.svg);
+}
+
+.inst {
+	-webkit-mask-image: url(images/icon-instagram.svg);
+	background-image: url(images/icon-instagram.svg);
+}
+
+.media-links a:hover {
+	background: var(--lime-green);
 }
 
 .footer-extra {
@@ -304,9 +371,13 @@ header .invite-btn {
 	text-decoration: none;
 }
 
+.attribution a:hover {
+	filter: brightness(1.3) saturate(1.1);
+}
+
 /* MEDIUM SIZE MEDIUM SIZE MEDIUM SIZE MEDIUM SIZE MEDIUM SIZE MEDIUM SIZE MEDIUM SIZE  */
 
-@media (min-width: 640px) {
+@media (min-width: 750px) {
 	body {
 		display: flex;
 		align-items: center;
@@ -639,17 +710,6 @@ header .invite-btn {
 		padding: 3.1875rem 1rem;
 	}
 
-	header nav ul a:hover {
-		border-bottom: 5px solid;
-		border-image-source: linear-gradient(
-			90deg,
-			var(--lime-green) 0%,
-			var(--bright-cyan) 100%
-		);
-		border-image-slice: 1;
-		border-width: 5px;
-	}
-
 	#menu-btn {
 		display: none;
 	}
@@ -742,15 +802,6 @@ header .invite-btn {
 			var(--bright-cyan) 100%
 		);
 		cursor: pointer;
-	}
-
-	.invite-btn:hover {
-		opacity: 0.7;
-	}
-
-	footer .invite-btn:hover {
-		opacity: 1;
-		mix-blend-mode: screen;
 	}
 
 	/* ICON SECTION */
@@ -884,9 +935,9 @@ header .invite-btn {
 		text-align: left;
 	}
 
-	.footer-container ul a:hover {
+	/* .footer-container ul a:hover {
 		color: var(--lime-green);
-	}
+	} */
 
 	.footer-container nav ul li:nth-child(-n + 3) {
 		grid-column: 1;
@@ -894,61 +945,6 @@ header .invite-btn {
 
 	.footer-container nav ul li:nth-last-child(-n + 3) {
 		grid-column: 2;
-	}
-
-	.media-links {
-		list-style: none;
-	}
-
-	.media-links li {
-		margin: 1rem 0.5rem;
-		display: inline-block;
-		position: relative;
-	}
-
-	.media-links .hover-color {
-		width: 100%;
-		height: 30px;
-		position: absolute;
-		top: 25%;
-		left: 0;
-	}
-
-	.media-links li a {
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		background-repeat: no-repeat;
-		mask-repeat: no-repeat;
-	}
-
-	.fb {
-		-webkit-mask-image: url(images/icon-facebook.svg);
-		background-image: url(images/icon-facebook.svg);
-	}
-
-	.yt {
-		-webkit-mask-image: url(images/icon-youtube.svg);
-		background-image: url(images/icon-youtube.svg);
-	}
-
-	.tw {
-		background-image: url(images/icon-twitter.svg);
-		-webkit-mask-image: url(images/icon-twitter.svg);
-	}
-
-	.pint {
-		-webkit-mask-image: url(images/icon-pinterest.svg);
-		background-image: url(images/icon-pinterest.svg);
-	}
-
-	.inst {
-		-webkit-mask-image: url(images/icon-instagram.svg);
-		background-image: url(images/icon-instagram.svg);
-	}
-
-	.media-links a:hover {
-		background: var(--lime-green);
 	}
 
 	.footer-extra {
